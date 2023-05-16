@@ -8,7 +8,6 @@ public class ChallangeMain {
 		// TODO Auto-generated method stub
 
 		Scanner input = new Scanner(System.in);
-		BigInteger zero=BigInteger.ZERO;
 		BigInteger num=BigInteger.valueOf(-1);
 		
 		 try {
@@ -19,8 +18,8 @@ public class ChallangeMain {
 		      input.nextLine(); 
 		    }
 		 
-		while(num.compareTo(zero)!=0) {
-			if(num.compareTo(zero)==-1)
+		while(num.compareTo(BigInteger.ZERO)!=0) {
+			if(num.compareTo(BigInteger.ZERO)==-1)
 				System.out.print("Enter a positive integer!\n");
 			else {
 				if(ChallangeSys.isArmstrong(num)) 

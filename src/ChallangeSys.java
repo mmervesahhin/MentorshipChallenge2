@@ -1,16 +1,12 @@
 import java.math.BigInteger;
 
 public class ChallangeSys {
-	
-	static BigInteger ten=BigInteger.TEN;
-	static BigInteger zero=BigInteger.ZERO;
-	static BigInteger one=BigInteger.ONE;
 
 	public static int numOfDigits(BigInteger num) {
 		int n=1;
 		
-		while(num.mod(ten).compareTo(num)!=0) {
-			num=num.divide(ten);
+		while(num.mod(BigInteger.TEN).compareTo(num)!=0) {
+			num=num.divide(BigInteger.TEN);
 			n++;
 		}
 		
@@ -22,11 +18,11 @@ public class ChallangeSys {
 		BigInteger copy=num;
 		int n=numOfDigits(num);
 		
-		while(copy.mod(ten).compareTo(copy)!=0) {
-			sum=sum.add(copy.mod(ten).pow(n));
-			copy=copy.divide(ten);
+		while(copy.mod(BigInteger.TEN).compareTo(copy)!=0) {
+			sum=sum.add(copy.mod(BigInteger.TEN).pow(n));
+			copy=copy.divide(BigInteger.TEN);
 		}
-		sum=sum.add(copy.mod(ten).pow(n));
+		sum=sum.add(copy.mod(BigInteger.TEN).pow(n));
 		
 		if(sum.compareTo(num)==0)
 			return true;
